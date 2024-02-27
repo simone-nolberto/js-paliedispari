@@ -37,9 +37,9 @@
 // esercizio Pari o dispari;
 
 const userChoice = prompt("Scegli pari o dispari?");
-console.log(userChoice);
+console.log(`Hai scelto ${userChoice}`);
 const userNumb = Number(prompt("Inserisci un numero da 1 a 5"));
-console.log(userNumb);
+console.log(`Il tuo numero è ${userNumb}`);
 
 function pcNumb(numb) {
     let pcNumb = numb;
@@ -47,14 +47,14 @@ function pcNumb(numb) {
 }
 
 const pcRandomNumb = pcNumb(Math.floor(Math.random() * 5) + 1);
-console.log(pcRandomNumb);
+console.log(`Il numero del pc è ${pcRandomNumb}`);
 
-// let sum = userNumb + pcRandomNumb;
-// console.log(sum);
+let sum = userNumb + pcRandomNumb;
+console.log(`La somma dei numeri è ${sum}`);
 
 function isSumEven(sum) {
 
-    let evenCheck = sum;
+    let evenCheck;
 
     if (sum % 2 === 0) {
         evenCheck = "pari";
@@ -68,7 +68,7 @@ function isSumEven(sum) {
 }
 
 let checkResults = isSumEven(userNumb + pcRandomNumb);
-console.log(checkResults);
+console.log(`Il risultato dell'operazione è ${checkResults}`);
 
 if (userChoice === checkResults) {
     console.log("Complimenti, hai vinto!");
